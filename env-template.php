@@ -18,5 +18,5 @@ return array(
 
     'GOOGLE_API_KEY' => '',
 
-    'SITE_URL' => 'http://whatever.dev',
+    'SITE_URL' => 'http://yourproject.dev',
 );
