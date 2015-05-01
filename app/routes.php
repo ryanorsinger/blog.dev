@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('sample');
+	return View::make('home');
 });
 
 /**
@@ -36,4 +36,4 @@ Route::group(array('prefix' => 'human-resources'), function()
     Route::resource('employees', 'EmployeesController');
     Route::resource('salaries', 'SalariesController');
     Route::resource('titles', 'TitlesController');
-}
+});
