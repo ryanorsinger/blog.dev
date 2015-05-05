@@ -13,4 +13,13 @@ class BaseModel extends Eloquent {
         return parent::asDateTime($value)->setTimezone(Config::get('app.local_timezone'));
     }
 
+    public function setUsernameAttribute($value)
+    {
+        $this->attributes['username'] = strtolower($value);
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = Hash::make($value);
+    }
 }
