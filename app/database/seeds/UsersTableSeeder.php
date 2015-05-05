@@ -7,14 +7,38 @@ class UsersTableSeeder extends Seeder {
 
 	public function run()
 	{
-		$faker = Faker::create();
-
-		foreach(range(1, 10) as $index)
-		{
-			User::create([
-
-			]);
-		}
+		DB::table('users')->delete();
+        $this->addDeveloperAsUser();
+        $this->addRandomUsers();
 	}
 
+    protected function addRandomUsers()
+    {
+        $faker = Faker::create();
+
+        for($i=0; $i<=23; $i++)
+        {
+            $user = new User();
+            $user->email =      $faker->email;
+            $user->username =   $faker->userName;
+            $user->password =   $faker->password;
+            $user->first_name = $faker->firstName;
+            $user->last_name =  $faker->lastName;
+            $user->save();
+        }
+
+    }
+
+    protected function addDeveloperAsUser()
+    {
+        $user = new User();
+        $user->username = $_ENV['ADMIN_USERNAME'];
+        $user->email = $_ENV['ADMIN_EMAIL'];
+        $user->password = $_ENV['ADMIN_PASSWORD'];
+        $user->first_name = $_ENV['ADMIN_FIRSTNAME'];
+        $user->last_name = $_ENV['ADMIN_LASTNAME'];
+        $user->save();
+    }
+
 }
+

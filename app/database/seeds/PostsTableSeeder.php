@@ -7,14 +7,19 @@ class PostsTableSeeder extends Seeder {
 
 	public function run()
 	{
+        DB::table('posts')->delete();
+
 		$faker = Faker::create();
 
-		foreach(range(1, 10) as $index)
-		{
-			Post::create([
-
-			]);
-		}
+        for($i=1; $i<=10; $i++)
+        {
+            $post = new Post();
+            $post->title = $faker->catchPhrase;
+            $post->body  = $faker->realText;
+            $post->user_id = mt_rand(1, 23);
+            $post->slug = $faker->slug;
+            $post->save();
+        }
 	}
 
 }
