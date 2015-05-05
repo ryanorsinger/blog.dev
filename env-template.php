@@ -10,11 +10,11 @@ return array(
     'MAIL_USER' => '',
     'MAIL_PASS' => '',
 
-    'USER_USERNAME' => '',
-    'USER_PASSWORD' => '',
-    'USER_EMAIL' => '',
-    'USER_FIRSTNAME' => '',
-    'USER_LASTNAME' => '',
+    'ADMIN_USERNAME' => '',
+    'ADMIN_PASSWORD' => '',
+    'ADMIN_EMAIL' => '',
+    'ADMIN_FIRSTNAME' => '',
+    'ADMIN_LASTNAME' => '',
 
     'GOOGLE_API_KEY' => '',
 

@@ -17,6 +17,11 @@ Route::get('/', function()
 });
 
 /**
+ * Routes for reports resources
+ */
+Route::resource('reports', 'ReportsController');
+
+/**
  * Routes for blog project resources
  */
 Route::group(array('prefix' => 'blog'), function()
