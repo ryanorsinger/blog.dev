@@ -1,6 +1,6 @@
 <?php
 
-class Tag extends \Eloquent {
+class Tag extends BaseModel {
 
 	// Add your validation rules here
 	public static $rules = [

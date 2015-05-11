@@ -51,7 +51,7 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$post = Post::findOrFail($id);
+		$post = Post::find($id);
 
 		return View::make('posts.show', compact('post'));
 	}

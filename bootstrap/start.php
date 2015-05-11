@@ -31,7 +31,7 @@ $env = $app->detectEnvironment(function()
         return $_SERVER['LARAVEL_ENV'];
     }
 
-    return 'local';
+    return 'production';
 });
 
 /*

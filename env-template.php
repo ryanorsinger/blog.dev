@@ -5,7 +5,8 @@ return array(
     'DB_NAME' => '',
     'DB_USER' => '',
     'DB_PASS' => '',
-
+    'MAIL_DOMAIN' => '',
+    'MAILGUN_PRIVATE_API_KEY' => '',
     'MAIL_HOST' => '',
     'MAIL_USER' => '',
     'MAIL_PASS' => '',

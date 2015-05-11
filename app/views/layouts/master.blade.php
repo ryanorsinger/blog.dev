@@ -16,20 +16,22 @@
   </head>
   <body>
 
-    @include('partials.navbar')
+    {{-- @include('partials.navbar') --}}
 
     <div class="container">
 
-      @include('partials.session-messages')
+      {{-- @include('partials.session-messages') --}}
 
       @yield('content')
 
-      @include('partials.footer')
+      {{-- @include('partials.footer') --}}
 
     </div>
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jqBootstrapValidation.js"></script>
+
     @yield('bottomscript')
     <!-- Google Analytics: todo change UA-XXXXX-X to be your site's ID. -->
     <script>

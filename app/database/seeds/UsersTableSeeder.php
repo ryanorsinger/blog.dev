@@ -32,11 +32,11 @@ class UsersTableSeeder extends Seeder {
     protected function addDeveloperAsUser()
     {
         $user = new User();
-        $user->username = $_ENV['ADMIN_USERNAME'];
-        $user->email = $_ENV['ADMIN_EMAIL'];
-        $user->password = $_ENV['ADMIN_PASSWORD'];
-        $user->first_name = $_ENV['ADMIN_FIRSTNAME'];
-        $user->last_name = $_ENV['ADMIN_LASTNAME'];
+        $user->username = $_ENV['DEFAULT_USER']['USERNAME'];
+        $user->email = $_ENV['DEFAULT_USER']['EMAIL'];
+        $user->password = $_ENV['DEFAULT_USER']['PASSWORD'];
+        $user->first_name = $_ENV['DEFAULT_USER']['FIRSTNAME'];
+        $user->last_name = $_ENV['DEFAULT_USER']['LASTNAME'];
         $user->save();
     }
 

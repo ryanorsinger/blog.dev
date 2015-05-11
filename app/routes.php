@@ -42,3 +42,8 @@ Route::group(array('prefix' => 'human-resources'), function()
     Route::resource('salaries', 'SalariesController');
     Route::resource('titles', 'TitlesController');
 });
+
+
+Route::get('test', function() {
+    return View::make('test');
+});

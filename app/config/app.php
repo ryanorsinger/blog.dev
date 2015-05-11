@@ -136,6 +136,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 	   	'Laracasts\Commander\CommanderServiceProvider',
 	   	'Way\Generators\GeneratorsServiceProvider',
+	   	'Zizaco\Confide\ServiceProvider',
+
 	),
 
 	/*
@@ -202,6 +204,8 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
+		'Confide'    		=> 'Zizaco\Confide\Facade',
+
 
 	),
 
