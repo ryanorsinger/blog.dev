@@ -19,11 +19,12 @@ class UsersTableSeeder extends Seeder {
         for($i=0; $i<=23; $i++)
         {
             $user = new User();
-            $user->email =      $faker->email;
-            $user->username =   $faker->userName;
-            $user->password =   $faker->password;
-            $user->first_name = $faker->firstName;
-            $user->last_name =  $faker->lastName;
+            $user->email                = $faker->email;
+            $user->username             = $faker->userName;
+            $user->password             = $faker->password;
+            $user->confirmation_code    = $faker->password;
+            $user->first_name           = $faker->firstName;
+            $user->last_name            = $faker->lastName;
             $user->save();
         }
 
@@ -32,11 +33,12 @@ class UsersTableSeeder extends Seeder {
     protected function addDeveloperAsUser()
     {
         $user = new User();
-        $user->username = $_ENV['DEFAULT_USER']['USERNAME'];
-        $user->email = $_ENV['DEFAULT_USER']['EMAIL'];
-        $user->password = $_ENV['DEFAULT_USER']['PASSWORD'];
-        $user->first_name = $_ENV['DEFAULT_USER']['FIRSTNAME'];
-        $user->last_name = $_ENV['DEFAULT_USER']['LASTNAME'];
+        $user->email                = $_ENV['DEFAULT_USER_EMAIL'];
+        $user->username             = $_ENV['DEFAULT_USER_USERNAME'];
+        $user->password             = $_ENV['DEFAULT_USER_PASSWORD'];
+        $user->confirmation_code    = $_ENV['DEFAULT_USER_CONFIRMATION_CODE'];
+        $user->first_name           = $_ENV['DEFAULT_USER_FIRSTNAME'];
+        $user->last_name            = $_ENV['DEFAULT_USER_LASTNAME'];
         $user->save();
     }
 

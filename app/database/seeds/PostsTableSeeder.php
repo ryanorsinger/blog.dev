@@ -9,14 +9,17 @@ class PostsTableSeeder extends Seeder {
 	{
         DB::table('posts')->delete();
 
-		$faker = Faker::create();
+
+        $faker = Faker::create();
 
         for($i=1; $i<=10; $i++)
         {
+            $user = User::all()->random()->id;
+
             $post = new Post();
             $post->title = $faker->catchPhrase;
             $post->body  = $faker->realText;
-            $post->user_id = mt_rand(1, 23);
+            $post->user_id = $user;
             $post->slug = $faker->slug;
             $post->save();
         }
