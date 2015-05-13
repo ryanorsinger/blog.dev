@@ -9,16 +9,14 @@ return array(
     'MAILGUN_DOMAIN'    => '',
     'MAILGUN_API_KEY'   => '',
 
-    'DEFAULT_USER' => [
-        'USERNAME'          => '',
-        'PASSWORD'          => '',
-        'CONFIRMATION_CODE' => '',
-        'EMAIL'             => '',
-        'FIRSTNAME'         => '',
-        'LASTNAME'          => '',
-    ],
+    'DEFAULT_USER_USERNAME'          => '',
+    'DEFAULT_USER_PASSWORD'          => '',
+    'DEFAULT_USER_CONFIRMATION_CODE' => '',
+    'DEFAULT_USER_EMAIL'             => '',
+    'DEFAULT_USER_FIRSTNAME'         => '',
+    'DEFAULT_USER_LASTNAME'          => '',
 
     'GOOGLE_API_KEY' => '',
 
-    'SITE_URL' => 'http://thisproject.dev',
+    'SITE_URL' => '',
 );
