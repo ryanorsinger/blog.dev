@@ -1,11 +1,9 @@
 <?php
 
-use \Esensi\Model\SoftModel as Model;
-
 /*
  * Class from which other models can inherit functionality from.
  */
-class BaseModel extends Model {
+class BaseModel extends Eloquent {
 
     /*
      * Convert any model-aware date/times to local timezone.

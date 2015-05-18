@@ -1,1 +1,0 @@
-/vagrant/sites/ry.dev/app/views/titles/show.blade.php

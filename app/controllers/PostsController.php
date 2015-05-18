@@ -77,6 +77,7 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
+
 		$post = Post::findOrFail($id);
 
 		$validator = Validator::make($data = Input::all(), Post::$rules);

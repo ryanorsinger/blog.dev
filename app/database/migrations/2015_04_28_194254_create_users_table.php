@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class ConfideSetupUsersTable extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,20 +15,11 @@ class ConfideSetupUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('username')->unique();
             $table->string('password');
-            $table->string('confirmation_code');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('remember_token')->nullable();
-            $table->boolean('confirmed')->default(false);
+            $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
-        });
-
-        // Creates password reminders table
-        Schema::create('password_reminders', function ($table) {
-            $table->string('email');
-            $table->string('token');
-            $table->timestamp('created_at');
         });
     }
 
@@ -37,7 +28,6 @@ class ConfideSetupUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('password_reminders');
         Schema::drop('users');
     }
 }

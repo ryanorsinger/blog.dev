@@ -16,34 +16,9 @@ Route::get('/', function()
 	return View::make('home');
 });
 
-/**
- * Routes for reports resources
- */
-Route::resource('reports', 'ReportsController');
+Route::resource('posts', 'PostsController');
 
-/**
- * Routes for blog project resources
- */
-Route::group(array('prefix' => 'blog'), function()
-{
-    Route::resource('posts', 'PostsController');
-});
-
-Route::resource('users', 'UsersController');
 Route::resource('tags', 'TagsController');
 
-/**
- * Routes for the Employees_DB examples
- */
-Route::group(array('prefix' => 'human-resources'), function()
-{
-    Route::resource('departments', 'DepartmentsController');
-    Route::resource('employees', 'EmployeesController');
-    Route::resource('salaries', 'SalariesController');
-    Route::resource('titles', 'TitlesController');
-});
-
-
-Route::get('test', function() {
-    return View::make('test');
-});
+Route::resource('users', 'UsersController');
+Route::controller('users', 'UsersController');

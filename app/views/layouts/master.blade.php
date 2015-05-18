@@ -2,37 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>TODO TITLE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="/js/html5shiv.js"></script>
-      <script src="/js/respond.min.js"></script>
-    <![endif]-->
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css" media="screen,projection">
 
     @yield('topscript')
 
-  </head>
-  <body>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    </head>
+    <body>
 
-    {{-- @include('partials.navbar') --}}
+    @include('partials.navbar')
 
-    <div class="container">
+    <main class="container">
+        @yield('content')
+    </main>
 
-      {{-- @include('partials.session-messages') --}}
+    {{-- Import jQuery from CDN --}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-      @yield('content')
+    <!-- Compiled and minified JavaScript for Materialize css library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 
-      {{-- @include('partials.footer') --}}
-
-    </div>
-
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/jqBootstrapValidation.js"></script>
-
-    @yield('bottomscript')
     <!-- Google Analytics: todo change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -43,5 +35,7 @@
       ga('create','UA-XXXXX-X','auto');ga('send','pageview');
     </script>
 
-  </body>
+    @yield('bottomscript')
+
+    </body>
 </html>

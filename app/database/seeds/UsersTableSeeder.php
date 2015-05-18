@@ -22,7 +22,6 @@ class UsersTableSeeder extends Seeder {
             $user->email                = $faker->email;
             $user->username             = $faker->userName;
             $user->password             = $faker->password;
-            $user->confirmation_code    = $faker->password;
             $user->first_name           = $faker->firstName;
             $user->last_name            = $faker->lastName;
             $user->save();
@@ -36,7 +35,6 @@ class UsersTableSeeder extends Seeder {
         $user->email                = $_ENV['DEFAULT_USER_EMAIL'];
         $user->username             = $_ENV['DEFAULT_USER_USERNAME'];
         $user->password             = $_ENV['DEFAULT_USER_PASSWORD'];
-        $user->confirmation_code    = $_ENV['DEFAULT_USER_CONFIRMATION_CODE'];
         $user->first_name           = $_ENV['DEFAULT_USER_FIRSTNAME'];
         $user->last_name            = $_ENV['DEFAULT_USER_LASTNAME'];
         $user->save();

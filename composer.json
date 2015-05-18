@@ -7,9 +7,6 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"laracasts/commander": "~1.0",
-		"esensi/model": "0.3.6",
-		"zizaco/confide": "~4.3@dev",
-		"bbatsche/entrust": "2.0.0",
 		"guzzlehttp/guzzle": "~4.0",
 		"fzaninotto/faker": "1.5.*@dev"
 	},

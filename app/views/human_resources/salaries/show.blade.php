@@ -1,1 +1,0 @@
-/vagrant/sites/ry.dev/app/views/salaries/show.blade.php
